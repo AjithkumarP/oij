@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Book.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">my-app</a> &gt; <a href="index.source.html" class="el_package">com.mycompany.app</a> &gt; <span class="el_source">Book.java</span></div><h1>Book.java</h1><pre class="source lang-java linenums">package com.mycompany.app;
+import java.util.*;
+class Book
+{
+    private int id,quantity;
+    private String name,publisher,author;
+    public Book(int id,String name,String author,String publisher,int quantity)
+<span class="fc" id="L8">    {</span>
+<span class="fc" id="L9">        this.id=id;</span>
+<span class="fc" id="L10">        this.name=name;</span>
+<span class="fc" id="L11">        this.author=author;</span>
+<span class="fc" id="L12">        this.publisher=publisher;</span>
+<span class="fc" id="L13">        this.quantity=quantity;</span>
+<span class="fc" id="L14">    }</span>
+    
+    public boolean equals(Object obj){
+<span class="fc" id="L17">Book emp = (Book) obj;</span>
+<span class="fc" id="L18">boolean status = false;</span>
+<span class="pc bpc" id="L19" title="5 of 10 branches missed.">if(this.name.equalsIgnoreCase(emp.name)</span>
+&amp;&amp; this.id == emp.id
+&amp;&amp; this.quantity == emp.quantity
+&amp;&amp; this.author==emp.author
+&amp;&amp; this.publisher==emp.publisher){
+<span class="fc" id="L24">status = true;</span>
+}
+<span class="fc" id="L26">return status;</span>
+}
+    public String toString()
+    {
+<span class="nc" id="L30">        return id+&quot; &quot;+name+&quot; &quot;+author+&quot; &quot;+publisher+&quot; &quot;+quantity;</span>
+    }
+
+    public static List&lt;Book&gt; getNumberofbooks()
+    {
+
+<span class="fc" id="L36">     List&lt;Book&gt; book=new ArrayList&lt;Book&gt;();</span>
+<span class="fc" id="L37">     book.add(new Book(1,&quot;ajith&quot;,&quot;ak&quot;,&quot;kg&quot;,100));</span>
+<span class="fc" id="L38">     book.add(new Book(2,&quot;kkkkk&quot;,&quot;kk&quot;,&quot;kkk&quot;,100));</span>
+<span class="fc" id="L39">     book.add(new Book(3,&quot;sss&quot;,&quot;ss&quot;,&quot;s&quot;,50));</span>
+<span class="fc" id="L40">     return book;</span>
+}
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.7.9.201702052155</span></div></body></html>

@@ -1,0 +1,49 @@
+public class Country{
+    private String name;
+    private String capital;
+    private long population;
+    private Date independenceDay;
+
+    public Country(String name){
+        this.name = name;
+    }
+  
+    public String getName(){ return name; }
+    public void setName(String name) {this.name = name;}
+  
+    public String getCapital() {return capital;}
+    public void setCapital(String capital) {this.capital = capital;}
+
+    public Date getIndependenceDay() {return independenceDay;}
+    public void setIndependenceDay(Date independenceDay) {this.independenceDay = independenceDay;}
+
+    public long getPopulation() { return population; }
+    public void setPopulation(long population) {this.population = population; }
+
+    @Override
+    public String toString() {
+        return "Country{" + "capital=" + capital + ", 
+               population=" + population + ", 
+               independenceDay=" + independenceDay + '}';
+
+    }
+
+    public void setIndependenceDay(String date) {
+        DateFormat format = new SimpleDateFormat("dd/MM/yyyy");
+        try {
+            this.independenceDay = format.parse(date);
+        } catch (ParseException ex) {
+            Logger.getLogger(Country.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    } 
+   
+   public static void main(String args[]){
+            Country India = new Country("India");
+            India.setCapital("New Delhi");
+            India.setIndependenceDay("15/07/1947");
+            India.setPopulation(1200000000);
+            
+            System.out.println(India);       
+   }
+
+}

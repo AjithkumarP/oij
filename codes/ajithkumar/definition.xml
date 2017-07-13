@@ -1,0 +1,30 @@
+<platform>
+    <!-- See documentation here: https://ops4j1.jira.com/wiki/display/paxrunner/5.4.1.+Pax+Runner+-+Platform+-+Extender -->
+    <name>
+        <!-- Framework Name (ex: Apache Felix 4.2.1) -->
+    </name>
+    <system>
+        <!-- Framework Link (ex: mvn:org.apache.felix/org.apache.felix.main/4.2.1) -->
+    </system>
+
+    <packages>
+        <!-- Optional System Packages -->
+    </packages>
+
+    <profile name="default" default="true">
+        <!-- Bundles (ex:
+        <bundle>
+            <name>Apache Felix Gogo Command (0.12.0)</name>
+            <url>link:classpath:runner-links/org.apache.felix.gogo.command-0.12.0.link</url>
+        </bundle>
+        <bundle>
+            <name>Apache Felix Gogo Runtime (0.10.0)</name>
+            <url>link:classpath:runner-links/org.apache.felix.gogo.runtime-0.10.0.link</url>
+        </bundle>
+        <bundle>
+            <name>Apache Felix Gogo Shell (0.10.0)</name>
+            <url>link:classpath:runner-links/org.apache.felix.gogo.shell-0.10.0.link</url>
+        </bundle>
+        -->
+    </profile>
+</platform>
